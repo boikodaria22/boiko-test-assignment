@@ -117,7 +117,7 @@ function handleUpdateSearch(val: string) {
 
 // Redirect to single user page
 function goToUserPage(id: number) {
-  if (!isNaN(+id)) {
+  if (!isNaN(+id) && id !== null) {
     router.push({ name: "user", params: { id } });
   } else {
     router.push({ name: "notFoundPage" });
